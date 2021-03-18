@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>18软件工程一班作业提交系统</title>
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		background-color: aquamarine;
+	}
+	#center{
+		padding: 2vw;
+		margin: auto;
+		width: 70vw;
+		height: 40vw;
+		background-color: aliceblue;
+		text-align: center;
+		
+	}
+	h1{
+		font-size: 3vw;
+	}
+		
+	p{
+		font-size: 2vw;
+	}
+	#warn{
+		color: red;
+	}
+	#form{
+		font-size: 2vw;
+		background-color: bisque;
+		width: 50vw;
+		height: 20vw;
+		margin: auto;
+		padding: 1vw;
+	}
+	.pswd{
+		width: 10vw;
+		height: 2vw;
+	}
+	
+</style>
+</head>
+<body>
+<div id="center">
+	<h1>2018级软件工程一班作业提交系统1.0版本</h1>
+	<p><b>By:小成Charles</b></p>
+	<form id="form" action="upload.php" method="post" enctype="multipart/form-data">
+	    <label for="file">文件名：</label>
+	    <input type="file" name="file" id="file" style="font-size: 2vw;"><br><br>
+		请输入提交密码：<input type="password" name="paswd" class="pswd" />
+	    <input id='btn_sub'  style="font-size: 2vw;" type="submit" name="submit" value="提交" onclick=subOnclik() ><br>
+		<p id="warn"></p>
+	</form>
+	<iframe  name="stop" style="display:none;"></iframe>
+</div>
+
+
+</body>
+
+
+<script type="text/javascript">
+
+
+function subOnclik(){
+
+	
+	document.getElementById("warn").innerHTML='正在提交中，请勿关闭网页'
+}
+		
+	
+</script>
+</html>
